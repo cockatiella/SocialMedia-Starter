@@ -1,8 +1,18 @@
-import "./App.css"
+import "./App.css";
+import Home from "./pages/Home";
+import Profile from "./pages/profile/Profile";
+import Auth from "./pages/Auth/Auth";
+
 function App() {
   return (
     <div className="App">
-        Subscribe Zainkeeps code
+      <div className="blur" style={{ top: "-18%", right: "0" }}></div>
+      <div className="blur" style={{ top: "36%", left: "-8rem" }}></div>
+      <div className="blur" style={{ bottom: "6%", right: "2rem" }}></div>
+
+        <Home />  
+       {/* <Profile/>  */}
+       {/* <Auth />  */}
     </div>
   );
 }

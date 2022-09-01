@@ -1,0 +1,28 @@
+.Post {
+  display: flex;
+  flex-direction: column;
+  padding: 1rem;
+  background: var(--cardColor);
+  border-radius: 1rem;
+  gap: 1rem;
+  margin-bottom: 5px;
+}
+
+.Post > img {
+  width: 100%;
+  max-height: 20rem;
+  object-fit: cover;
+  border-radius: 1rem;
+}
+
+.postReact{
+    display: flex;
+    align-items: flex-start;
+    gap: 1.5rem;
+
+}
+
+.heart{
+  height: 28px;
+  width: 30px;
+}
