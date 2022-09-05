@@ -54,7 +54,7 @@ See the section about [deployment](https://facebook.github.io/create-react-app/d
 - [React](https://facebook.github.io/react/)
 - [Freepik](https://www.freepik.com/)
 - [Google Fonts](https://www.fonts.google.com/)
-- [Mantine](https://www.manteproject.org/)
+- [Mantine](https://mantine.dev/core/modal/)
 - [Webgradients](https://webgradients.com/)
 
 ---
