@@ -8,7 +8,7 @@ import NotLike from "../../img/notlike.png";
 export default function Post({ data }) {
   return (
     <div className="Post">
-      <img src={data.img} alt="" />
+      <img className='img-fluid' src={data.img} alt="" />
 
       <div className="postReact">
         <img className='heart' src={data.liked ? Heart : NotLike} alt="" />
@@ -19,7 +19,7 @@ export default function Post({ data }) {
 
       <span style={{color: 'var(--gray)', fontSize: '12px'}}>{data.likes} likes</span>
       <div className="detail">
-        <span><b>{data.name}</b></span>
+        <span><b>@{data.name}</b></span>
         <span> {data.desc}</span>
       </div>
     </div>

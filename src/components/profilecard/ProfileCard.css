@@ -96,6 +96,12 @@
   align-self: center;
   margin-bottom: 1rem;
   cursor: pointer;
+  
+}
+
+span > a {
+  text-decoration: none;
+  color: rgb(43, 168, 226);
 }
 
 .cover {

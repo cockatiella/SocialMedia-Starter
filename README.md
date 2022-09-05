@@ -37,7 +37,7 @@ See the section about [deployment](https://facebook.github.io/create-react-app/d
 ## Project overview
 
 ![](./logIn.jpg)
-![](./HomePage.png)
+![](./ProfilePage.png)
 
 
 ---

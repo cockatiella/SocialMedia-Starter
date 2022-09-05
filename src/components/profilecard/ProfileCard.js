@@ -2,6 +2,7 @@ import React from "react";
 import Cover from "../../img/cover.jpg";
 import Profile from "../../img/profileImg.jpg";
 import "./ProfileCard.css";
+import { Link } from "react-router-dom";
 
 export default function ProfileCard() {
 
@@ -51,7 +52,7 @@ const ProfilePage = true;
         <hr />
       </div>
 
-      <span>My Profile</span>
+      <span> <Link to='/profile'>My Profile</Link></span>
     </div>
   );
 }

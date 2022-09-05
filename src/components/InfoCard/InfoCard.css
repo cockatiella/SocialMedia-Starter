@@ -25,3 +25,8 @@
     margin-top: 6rem;
     align-self: flex-end;
 }
+
+a{
+    text-decoration: none;
+    color: var(--textColor);
+}
