@@ -9,7 +9,7 @@ export default function FollowersCard() {
 
       {Followers.map((follower, id) => {
         return (
-          <div className="follower mt-2">
+          <div key={id} className="follower mt-2">
             <div>
               <img src={follower.img} alt="" className="followerImg img-fluid" />
               <div className="name">

@@ -5,13 +5,13 @@ export default function TrendCard() {
   return (
     <div className="TrendCard">
       <h3>Trends for you:</h3>
-      {TrendData.map((trend) => {
+      {TrendData.map((trend, id) => {
         return (
-          <div className="trend">
-            <span>#{trend.name}</span>
+          <div key={id} className="trend">
+            <span >#{trend.name}</span>
             <span> {trend.shares}K Shares</span>
           </div>
-        );
+        )
       })}
     </div>
   );

@@ -31,22 +31,22 @@ export default function PostShare() {
             <svg
               stroke="currentColor"
               fill="currentColor"
-              stroke-width="0"
+              strokeWidth="0"
               viewBox="0 0 16 16"
               height="1em"
               width="1em"
               xmlns="http://www.w3.org/2000/svg"
             >
               <path
-                fill-rule="evenodd"
+                fillRule="evenodd"
                 d="M14.002 2h-12a1 1 0 00-1 1v10a1 1 0 001 1h12a1 1 0 001-1V3a1 1 0 00-1-1zm-12-1a2 2 0 00-2 2v10a2 2 0 002 2h12a2 2 0 002-2V3a2 2 0 00-2-2h-12z"
-                clip-rule="evenodd"
+                clipRule="evenodd"
               ></path>
               <path d="M10.648 7.646a.5.5 0 01.577-.093L15.002 9.5V14h-14v-2l2.646-2.354a.5.5 0 01.63-.062l2.66 1.773 3.71-3.71z"></path>
               <path
-                fill-rule="evenodd"
+                fillRule="evenodd"
                 d="M4.502 7a1.5 1.5 0 100-3 1.5 1.5 0 000 3z"
-                clip-rule="evenodd"
+                clipRule="evenodd"
               ></path>
             </svg>
             Photo
@@ -55,7 +55,7 @@ export default function PostShare() {
             <svg
               stroke="currentColor"
               fill="currentColor"
-              stroke-width="0"
+              strokeWidth="0"
               viewBox="0 0 1024 1024"
               height="1em"
               width="1em"
@@ -70,7 +70,7 @@ export default function PostShare() {
             <svg
               stroke="currentColor"
               fill="currentColor"
-              stroke-width="0"
+              strokeWidth="0"
               viewBox="0 0 24 24"
               height="1em"
               width="1em"
@@ -79,7 +79,7 @@ export default function PostShare() {
               <path
                 fill="none"
                 stroke="#000"
-                stroke-width="2"
+                strokeWidth="2"
                 d="M12,22 C12,22 4,16 4,10 C4,5 8,2 12,2 C16,2 20,5 20,10 C20,16 12,22 12,22 Z M12,13 C13.657,13 15,11.657 15,10 C15,8.343 13.657,7 12,7 C10.343,7 9,8.343 9,10 C9,11.657 10.343,13 12,13 L12,13 Z"
               ></path>
             </svg>
@@ -89,7 +89,7 @@ export default function PostShare() {
             <svg
               stroke="currentColor"
               fill="currentColor"
-              stroke-width="0"
+              strokeWidth="0"
               viewBox="0 0 24 24"
               height="1em"
               width="1em"
@@ -117,7 +117,7 @@ export default function PostShare() {
             onClick={() => setImage(null)}
             stroke="currentColor"
             fill="currentColor"
-            stroke-width="0"
+            strokeWidth="0"
             version="1.1"
             viewBox="0 0 16 16"
             height="20px"

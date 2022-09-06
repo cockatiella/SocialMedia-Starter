@@ -99,7 +99,7 @@ const Auth = () => {
           <div>
               <span style={{fontSize: '12px'}}>Already have an account. Login!</span>
           </div>
-          <button className="button infoButton" type="submit">Signup</button>
+          <button className="button infoButton" type="submit">Sign up</button>
         </form>
       </div>
     );
