@@ -11,6 +11,14 @@ Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
 ---
 # Chirp-website
 
+---
+
+## Wireframe
+
+![](./Home%20page%20Wireframe.png)
+
+---
+
 ## Project overview
 
 ![](./logIn.jpg)
