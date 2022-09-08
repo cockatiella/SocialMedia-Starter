@@ -22,8 +22,10 @@
 }
 
 .ProfileImages > img:nth-of-type(2) {
-  width: 10rem;
-  border-radius: 40px;
+  object-fit: cover;
+  width: 150px;
+  height: 150px;
+  border-radius: 50%;
   position: absolute;
   bottom: -3rem;
   box-shadow: var(--profileShadow);
@@ -96,7 +98,6 @@
   align-self: center;
   margin-bottom: 1rem;
   cursor: pointer;
-  
 }
 
 span > a {

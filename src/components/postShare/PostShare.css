@@ -18,6 +18,7 @@
   flex-direction: column;
   gap: 1rem;
   width: 100vh;
+  min-width: 300px;
 }
 
 .PostShare > div > input {
