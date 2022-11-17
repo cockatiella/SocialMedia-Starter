@@ -49,7 +49,7 @@ function ProfileModal({ modalOpened, setModalOpened }) {
             type="text"
             className="infoInput"
             name="livesIN"
-            placeholder="LIves in"
+            placeholder="Lives in"
           />
 
           <input

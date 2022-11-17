@@ -1,26 +1,55 @@
 import React, { useState, useRef } from "react";
 import ProfileImage from "../../img/profileImg.jpg";
 import "./PostShare.css";
+import { useDispatch, useSelector } from "react-redux";
+import { uploadImage, uploadPost } from "../../actions/uploadAction";
 
 export default function PostShare() {
   const [image, setImage] = useState(null);
   const imageRef = useRef(null);
+  const { user } = useSelector((state) => state.authReducer.authData);
+  const desc = useRef();
+  const dispatch = useDispatch();
 
   //checks if the event contains any files-then it should be on the zero index of our file.-set the img in the use state.
   const onImageChange = (e) => {
     if (e.target.files && e.target.files[0]) {
       let img = e.target.files[0];
-      setImage({
-        image: URL.createObjectURL(img),
-      });
+      setImage(img);
     }
+  };
+
+  const handleSubmit = (e) => {
+    e.preventDefault();
+    const newPost = {
+      userId: user._id,
+      desc: desc.current.value,
+    };
+    if (image) {
+      const data = new FormData();
+      const fileName = Date.now() + image.name;
+      data.append("name", fileName);
+      data.append("file", image);
+      newPost.image = fileName;
+      try {
+        dispatch(uploadImage(data));
+      } catch (err) {
+        console.log(err);
+      }
+    }
+    dispatch(uploadPost(newPost));
   };
 
   return (
     <div className="PostShare">
       <img src={ProfileImage} alt="" className="img-fluid" />
       <div>
-        <input type="text" placeholder="What's happening?" />
+        <input
+          type="text"
+          placeholder="What's happening?"
+          ref={desc}
+          required
+        />
         <div className="postOptions">
           <div
             className="option"
@@ -100,7 +129,9 @@ export default function PostShare() {
             </svg>
             Schedule
           </div>
-          <button className="button ps-button">Share</button>
+          <button className="button ps-button" onClick={handleSubmit}>
+            Share
+          </button>
         </div>
         <div style={{ display: "none" }}>
           <input
@@ -126,7 +157,11 @@ export default function PostShare() {
           >
             <path d="M15.854 12.854c-0-0-0-0-0-0l-4.854-4.854 4.854-4.854c0-0 0-0 0-0 0.052-0.052 0.090-0.113 0.114-0.178 0.066-0.178 0.028-0.386-0.114-0.529l-2.293-2.293c-0.143-0.143-0.351-0.181-0.529-0.114-0.065 0.024-0.126 0.062-0.178 0.114 0 0-0 0-0 0l-4.854 4.854-4.854-4.854c-0-0-0-0-0-0-0.052-0.052-0.113-0.090-0.178-0.114-0.178-0.066-0.386-0.029-0.529 0.114l-2.293 2.293c-0.143 0.143-0.181 0.351-0.114 0.529 0.024 0.065 0.062 0.126 0.114 0.178 0 0 0 0 0 0l4.854 4.854-4.854 4.854c-0 0-0 0-0 0-0.052 0.052-0.090 0.113-0.114 0.178-0.066 0.178-0.029 0.386 0.114 0.529l2.293 2.293c0.143 0.143 0.351 0.181 0.529 0.114 0.065-0.024 0.126-0.062 0.178-0.114 0-0 0-0 0-0l4.854-4.854 4.854 4.854c0 0 0 0 0 0 0.052 0.052 0.113 0.090 0.178 0.114 0.178 0.066 0.386 0.029 0.529-0.114l2.293-2.293c0.143-0.143 0.181-0.351 0.114-0.529-0.024-0.065-0.062-0.126-0.114-0.178z"></path>
           </svg>
-          <img className="img-fluid" src={image.image} alt="preview" />
+          <img
+            className="img-fluid"
+            src={URL.createObjectURL(image)}
+            alt="preview"
+          />
         </div>
       )}
     </div>
