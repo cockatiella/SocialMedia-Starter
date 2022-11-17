@@ -10,7 +10,8 @@ import authRoute from "./routes/authRoute.js";
 import userRoute from "./routes/userRoute.js";
 import postRoute from "./routes/postRoute.js";
 import uploadRoute from "./routes/uploadRoute.js";
-// import MessageRoute from './routes/MessageRoute.js'
+import ChatRoute from './routes/ChatRoute.js'
+import MessageRoute from './routes/MessageRoute.js'
  
 
 // Initialize express
@@ -47,4 +48,5 @@ app.use("/auth", authRoute);
 app.use("/user", userRoute);
 app.use("/post", postRoute);
 app.use("/upload", uploadRoute);
-// app.use('/message', MessageRoute)
+app.use('/chat', ChatRoute)
+app.use('/message', MessageRoute)
